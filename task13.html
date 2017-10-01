@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>task13</title>
+  <style type="text/css">
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    .name{
+      padding: 10px;
+    }
+    #btn{
+      background-color: #337AB8;
+      color: #fff;
+      padding: 10px;
+      border-radius: 5px;
+      border:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- 表单 -->
+    <form method="post">
+      <div class="form-item">
+        <label for="name">名称</label>
+        <input type="text" name="name" id="name">
+        <button id="btn" type="button">验证</button>
+      </div>
+      <div id="display"></div>
+    </form>
+  </div>
+  <script type="text/javascript">
+    function init(){
+      var btn = document.getElementById("btn");
+
+      btn.onclick = function(){
+        display()
+      }
+    }
+
+    function display(){
+      var display = document.getElementById("display");
+      var name = document.getElementById("name").value;
+      console.log(name);
+      var charLength = 0;
+      if(name == ""){
+        display.innerHTML = "姓名不能为空";
+      }else{
+        for(var i=0;i<name.length;i++){
+          var reg = /[\u4e00-\u9fa5]/;
+          // 是否中文
+          if(reg.test(name[i])){
+            charLength += 2;
+          }else{
+            charLength += 1;
+          }
+        }
+        console.log(charLength);
+        if(charLength > 4 && charLength < 16){
+          display.innerHTML = "输入合法";
+        }else{
+          display.innerHTML = "字符数为4-16";
+        }
+      }
+    }
+    init();
+  </script>
+</body>
+</html>

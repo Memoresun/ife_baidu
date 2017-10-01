@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>zh</title>
+  <style type="text/css">
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    .container{
+      border: 1px solid #000;
+      padding: 10px;
+      float: left;
+      margin: 50px 0 0 50px;
+    }
+    .con0{
+      border: 1px solid #000;
+      padding: 10px;
+      float: left;
+      margin: 5px;
+    }
+    .con1{
+      border: 1px solid #000;
+      padding: 10px;
+      float: left;
+      margin: 5px;
+    }
+    .con2{
+      width: 50px;
+      height: 50px;
+      border: 1px solid #000;
+      float: left;
+      margin: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container" id="container">
+    <div class="con0">
+      <div class="con1">
+        <div class="con2">
+        </div>
+        <div class='con2'></div>
+      </div>
+      <div class="con1">
+        <div class="con2"></div>
+        <div class="con2"></div>
+      </div>
+    </div>
+    <div class="con0">
+      <div class="con1">
+        <div class="con2"></div>
+        <div class="con2"></div>
+      </div>
+      <div class="con1">
+        <div class="con2"></div>
+        <div class="con2"></div>
+      </div>
+    </div>
+  </div>
+  <div class="op">
+    <button id="x">前序遍历</button>
+    <button id="z">中序遍历</button>
+    <button id="h">后序遍历</button>
+  </div>
+  <script type="text/javascript">
+
+    function init(){
+      var x = document.getElementById("x");
+      x.onclick = function(){
+        console.log('前序遍历');
+        var node = document.getElementById("container");
+        console.log(node);
+        preOrder(node);
+      }
+    }
+
+    function animation(arr){
+      t = setInterval(function(){
+        if(i>0){
+          arr[i-1].st
+        }
+      })
+    }
+
+    // 先序遍历
+    function preOrder(node){
+      if(!node == null){
+        arr.push(node);
+        preOrder(node.firstChild);
+        preOrder(node.lastChild);
+      }
+    }
+
+    init();
+  </script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>task14</title>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="row-inline">
+        <label for="username">名称</label>
+        <input type="text" name="username" id="username">
+      </div>
+      <div class="row-tip"></div>
+    </div>
+
+    <div class="row">
+      <div class="row-inline">
+        <label for="password">密码</label>
+        <input type="text" name="password" id="password">
+      </div>
+      <div class="row-tip"></div>
+    </div>
+
+    <div clss="row">
+      <div class="row-inline">
+        <label for="confirm">密码确认</label>
+        <input type="text" name="password">
+      </div>
+      <div class="row-tip"></div>
+    </div>
+
+    <div class="row">
+      <div class="row-inline">
+        <label for="email">邮箱</label>
+        <input type="text" name="email">
+      </div>
+      <div class="row-tip"></div>
+    </div>
+
+    <div class="row">
+      <div class="row-inline">
+        <label for="phone">手机</label>
+        <input type="text" name="phone">
+      </div>
+      <div class="row-tip"></div>
+    </div>
+
+    <div class="row">
+      <input type="submit" name="" value="提交">
+    </div>
+  </div>
+<script type="text/javascript">
+
+  function init(){
+    var username = document.getElementById("username");
+    var password = document.getElementById("password");
+    console.log(username);
+
+    // 获得焦点
+    username.addEventListener('focus',function(){
+      console.log("username获得焦点");
+    })
+
+    username.addEventListener('blur',function(){
+      console.log("username失去焦点");
+    })
+
+    password.addEventListener('focus',function(){
+      console.log("password获得焦点");
+    })
+
+    password.addEventListener('blur',function(){
+      console.log("password失去焦点");
+    })
+  }
+
+  init();
+</script>
+</body>
+</html>

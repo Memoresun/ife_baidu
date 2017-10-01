@@ -19,27 +19,22 @@
 </head>
 <body>
   <div id="op">
-    <input type="text" name="num" id="num">
+    <textarea id="text"></textarea>
     <button id="left-in">左侧入</button>
     <button id="right-in">右侧入</button>
     <button id="left-out">左侧出</button>
     <button id="right-out">右侧出</button>
+    <input type="text" name="search" id="search">
+    <button id="search-btn">查询</button>
   </div>
   <div id="display"></div>
   <script type="text/javascript">
     
-    function checkNum(){
-      console.log('checkNum');
-      var num = document.getElementById("num").value;
-      if(num.value == ""){
-        alert('请输入一个数字');
-        return "-1";
-      }else if(isNaN(num)){
-        alert('请输入一个数字');
-        return "-1";
-      }else{
-        return num;
-      }
+    function getData(){
+      var data = new Array();
+      var text = document.getElementById("text").value;
+      data = text.split(",");
+      return data;
     }
 
     function render(data){
@@ -61,22 +56,24 @@
       var rightOut = document.getElementById("right-out");
       // 数字
       var array = new Array();
+     
       // 左侧入
       leftIn.onclick = function(){
-        var num = checkNum();
-        if(num != -1){
-          array.unshift(num);
-          render(array);
-        }
+        var data = getData();
+        data.forEach(function(value,index){
+          array.unshift(value);
+        })
+        render(array);
+       
       }
 
       // 右侧入
       rightIn.onclick = function(){
-        var num = checkNum();
-        if(num != -1){
-          array.push(num);
-          render(array);
-        }
+        var data = getData();
+        data.forEach(function(value,index){
+          array.push(value);
+        })
+        render(array);
       }
 
       // 左侧出

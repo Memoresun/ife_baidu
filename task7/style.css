@@ -1,0 +1,93 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+li{
+  list-style-type: none;
+}
+.container{
+  width: 1280px;
+  margin: 0 auto;
+}
+.nav-header{
+  line-height: 55px;
+  height: 55px;
+}
+.nav-logo{
+  float: left;
+}
+.nav{
+  float: right;
+}
+.nav-item{
+  float: left;
+}
+.box1{
+  position: relative;
+  width: 1280px;
+  height: 692px;
+  background: url(images/banner.png)
+}
+.box1-con{
+  position: absolute;
+  top: 16%;
+  left: 8%;
+  color: #fff;
+}
+.box1-con h2{
+  font-size: 60px;
+}
+.box1-con p {
+  font-size: 21px;
+  line-height: 30px;
+  margin-bottom: 65px;
+}
+
+.start-test{
+  width: 333px;
+  height: 65px;
+  background-color: #ef4f4d;
+  color: #fff;
+  text-align: center;
+  font-size: 30px;
+  letter-spacing: 5px;
+  line-height: 65px;
+}
+
+.box2-list{
+  height: 250px;
+}
+
+.box2-item{
+  width: 25%;
+  float: left;
+}
+
+.item-image{
+  text-align: center;
+}
+.item-con{
+  text-align: center;
+}
+
+.box3{
+  width: 1280px;
+  text-align: center;
+  background-color: #efefef;
+}
+.box3-image{
+
+}
+
+.box3 h3{
+  font-size: 60px;
+}
+
+.box4{
+  text-align: center;
+}
+
+.box5-item{
+  float: left;
+}
